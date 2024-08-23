@@ -12,18 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      .manrope-font {
-        font-family: "Manrope", sans-serif;
-      }
-      .bg-image {
-        background-image: url(./assets/bg.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
-
+    
     <!-- daisyui and tailwind cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -37,6 +26,9 @@
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily:{
+                'manrope':["Manrope", 'sans-serif'],
+              },
             colors: {
               clifford: "#da373d",
               "btn-main": "#ABEF5F",
@@ -46,6 +38,7 @@
               "text-3": "rgb(33, 33, 33)",
               "bg-main": "rgb(244, 244, 244)",
               "footer-main": "rgb(28, 28, 28)",
+            
             },
           },
         },
@@ -58,7 +51,7 @@
     ></script>
   </head>
 
-  <body class="manrope-font">
+  <body class="font-manrope">
     <!-- header section -->
     <header class="bg-gradient-to-b from-bg-main to-white">
       <!-- navbar section -->
@@ -442,7 +435,7 @@
     <!-- main section ends here -->
 
     <!-- next project section -->
-    <section class="bg-image my-2 py-12 lg:py-24">
+    <section class="bg-[url('./assets/bg.jpg')] bg-cover bg-center bg-no-repeat my-2 py-12 lg:py-24">
       <section class="w-[90%] lg:w-[70%] mx-auto">
         <div
           class="flex flex-col justify-center items-center text-center space-y-6"
